@@ -8,40 +8,58 @@
         tools:context=".MainActivity">
 
     <TextView
-            android:text="Something  A bit Longer"
+            android:text="Dissatisfaction"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView2"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="16dp"
+            android:id="@+id/TitleText"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="64dp"
             app:layout_constraintStart_toStartOf="parent"
+            android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"/>
     <TextView
-            android:text="This time what I am writing takes a lot longer.  WOOOOW,what if I want it to be longer"
+            android:text="The goal of this game is to make this paragraph larger.  Good luck you piece of sh**"
+            android:textSize="25sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_margin="29sp"
+            android:padding="20sp"
+            android:id="@+id/CenterText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TitleText"/>
+    <Button
+            android:id="@+id/FakeButt"
+            android:text="Make The Paragraph\n Larger "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            app:layout_constraintHorizontal_bias="1.0"
-            android:layout_marginTop="64dp" app:layout_constraintTop_toTopOf="@+id/textView2"/>
+            app:layout_constraintTop_toBottomOf="@id/CenterText"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/BottomText"
+            android:onClick="fakeButtonClick"/>
     <Button
-            android:text="0"
+            android:id="@+id/RealButt"
+            android:text="Make The Paragraph\n Smaller "
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/button" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/textView3"/>
-    <Button
-            android:text="1"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/CenterText"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/BottomText"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:onClick="realButtonClick"/>/>
+    <Button android:id="@+id/LargeButt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/button2" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/textView3"/>
+            android:text="DON'T PRESS THIS"
+            app:layout_constraintBottom_toTopOf="@+id/BottomText"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:onClick="killBabies"
+    />
     <TextView
             android:text="TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView3"
+            android:id="@+id/BottomText"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp" android:layout_marginBottom="32dp"/>
